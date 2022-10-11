@@ -3,34 +3,106 @@
 *{
     margin: 0;
     font-family:'Open Sans', sans-serif;
+
+} 
+
+
+.bloc{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.img{
+    margin: 5% 0;
 }
 
 .container{
-    margin: 3rem 0;
+    background-color: #6C63FF;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
+
 
 .card{
-    padding: 2rem 1rem;
+    background-color: white;
+    padding: 1rem 1rem;
     justify-content: center;
+    height: 70%;
+    width: 40vh;
     margin: auto;
-    border: solid 1px rgb(147, 147, 147);
-    border-radius: 13px;
+    border: none;
+    border-radius: 5px;
+   
 }
 
-input[type=email]{
+.card, h2{
+    margin-bottom: 2rem;
+}
+.card , p{
+    margin-top: 1rem;
+}
+ 
+input{
+    border:none;
+    border-bottom: 1px solid rgb(148, 148, 148) ;
     margin-bottom: 1rem;
+    width: 100% ;
+
 }
 
 input[type=password]{
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 button{
     border: none;
-    background-color: rgb(0, 170, 255);
+    background-color: #6C63FF;
     padding: 5px 8px;
     border-radius: 4px;
+    width: 100%;
 }
+
+button:hover{
+    cursor: pointer;
+}
+
+
+.g{
+    width: 1.5rem;
+    margin-left: 1rem ;
+}
+
+.git{
+    width: 1.5rem;
+    margin-left: 1rem ;
+}
+
+
+
+.outros{
+    display: flex;
+    width: 100%;
+    padding: 5px 0;
+    border: 1px solid  rgb(148, 148, 148);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+h3{
+    color: rgb(148, 148, 148);
+    margin-left: .5rem;
+    font-weight: 300;
+}
+
