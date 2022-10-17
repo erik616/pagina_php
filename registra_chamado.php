@@ -19,6 +19,7 @@
 
     //ECHO $texto
     header('Location: abrir_chamado.php');
+    header('Location: home.php');
     
 
 

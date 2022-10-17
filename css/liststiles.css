@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    font-family:'Open Sans', sans-serif;
+    width:100%;
+} 
+
+
+body{
+    background-color:#6C63FF;
+}
+
+.list{
+    margin:4rem auto;
+    heigth:auto;
+    width:80%;
+}
+
+.cardlist {
+    heigth:auto;
+    padding:1rem;
+    width:100%;
+    background-color: white;
+    border:none;
+    border-radius:8px;
+}
+
+ul {
+    list-style:none;
+}

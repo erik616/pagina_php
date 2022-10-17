@@ -1,22 +1,39 @@
 <?php
-  require_once "validador_acesso.php";
+require_once "validador_acesso.php";
 ?>
 
-<html>
-  <head>
-    <link rel="stylesheet" href="stilos.css">
-    <title>PHP Home</title>
-  </head>
-  <body>
-  <h1>Hello World</h1>
-    
-    <?php 
-      
-        
+<html lang="pt-br">
 
-    ?> 
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./css/styles.css">
 
-    
-    <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
-  </body>
+  <title>Home</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="write">
+      <a href="./formhelp.php">
+        <img src="./imagns/write.svg" alt="criar" style="height:50%;">
+      </a>
+    </div>
+    <div class="read">
+      <a href="./listhelp.php">
+        <img src="./imagns/list.svg" alt="lista" style="height:60%; width:30%">
+      </a>
+    </div>
+
+  </div>
+
+  <?php
+
+
+
+  ?>
+
+
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+
 </html>
