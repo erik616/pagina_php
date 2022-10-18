@@ -52,8 +52,11 @@ fclose($myarq);
 
         <div class="cardlist">
             <div class="top">
-                <h3><?=$chamado_dados[1]?></h3>
-                <h4><?=$chamado_dados[2]?></h4>
+                <h3>Titulo</h3>
+                <h4><?=$chamado_dados[1]?></h4>
+                <h3>Categoria</h3>
+                <h5><?=$chamado_dados[2]?></h5>
+                <h3>Descrição</h3>
                 <p><?=$chamado_dados[3]?></p>
             </div>
         </div>
