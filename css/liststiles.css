@@ -10,19 +10,20 @@ body{
 }
 
 .list{
-    margin:4rem auto;
+    margin:1rem auto;
     heigth:auto;
-    width:80%;
+    width:50%;
 }
 
 .cardlist {
     heigth:auto;
     padding:1rem;
-    width:100%;
+    width:auto;
     background-color: white;
     border:none;
     border-radius:8px;
 }
+
 
 ul {
     list-style:none;

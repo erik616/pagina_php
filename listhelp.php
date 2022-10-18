@@ -1,9 +1,21 @@
+<?php require_once "validador_acesso.php" ?>
+
 <?php
 
-    session_start();
-   
+//ARRAY DE CHAMADOS 
+$chamados = array();
 
-   //$myarq = fopen("./app/arquivo.hd","r");
+$myarq = fopen("./app/arquivo.hd", "r");
+
+//ENQUANTO HOUVER REGISTROS A SEREM RECUPERADOS
+while (!feof($myarq)) {  //testa o fim do arquive, no caso a primeira linha
+    //linhas
+    $registro = fgets($myarq);
+    $chamados[] = $registro;
+}
+
+fclose($myarq);
+
 ?>
 
 <html lang="pt-br">
@@ -15,39 +27,40 @@
 </head>
 
 <body>
-    <div class="list">
-        <div class="cardlist">
-            <ul class="top">
-                <li>
-                    Titulo:
-                    <span>
-               
-                    </span>
-                </li>
-                <li>
-                    Categoria:
-                    <span>
-
-                    </span>
-                </li>
-                <li>
-                    Descrição:
-                    <span>
-                        
-                    </span>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
     
-    <?php
-        //fclose($myfile);
-    ?>
+        <?php 
+            foreach($chamados as $chamado) { ?>
+        
+            <?php
+                //PERMITE COM BASO NUMA STRING CRIAR UM DELIMITADOR
+                $chamado_dados = explode('#', $chamado);
 
+                //print_r($chamado_dados);
 
-    <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+                if($_SESSION['perfil_id'] == 2) {
+                    //PERFIL DO ID DO USUARIO
+                    if($_SESSION['id'] != $chamado_dados[0]) {
+                        continue;
+                    }
+                }
+
+                if(count($chamado_dados) < 3){
+                    continue;
+                }
+            ?>
+        <div class="list">
+
+        <div class="cardlist">
+            <div class="top">
+                <h3><?=$chamado_dados[1]?></h3>
+                <h4><?=$chamado_dados[2]?></h4>
+                <p><?=$chamado_dados[3]?></p>
+            </div>
+        </div>
+        </div>
+
+        <?php }?>
+   
 </body>
 
 </html>
